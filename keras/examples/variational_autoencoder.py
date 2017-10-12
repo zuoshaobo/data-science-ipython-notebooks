@@ -80,6 +80,7 @@ vae.fit(x_train,
         batch_size=batch_size,
         validation_data=(x_test, x_test))
 
+vae.save("v.h5")
 # build a model to project inputs on the latent space
 encoder = Model(x, z_mean)
 
